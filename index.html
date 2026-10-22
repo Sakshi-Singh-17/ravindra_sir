@@ -1,0 +1,2401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Shri Ravindra Upadhyay Sir | My Mathematics Teacher
+    </title>
+
+    <meta
+        name="description"
+        content="A personal tribute to Shri Ravindra Upadhyay Sir, my Mathematics teacher and a guiding influence throughout my mathematical journey."
+    >
+
+    <style>
+
+        /* =========================================
+           GLOBAL
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #0b1020;
+            color: #f5f1e8;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --gold: #d6b56d;
+            --light-gold: #f1d99a;
+            --dark: #0b1020;
+            --dark-blue: #111a31;
+            --text: #f5f1e8;
+            --muted: #c8c3b8;
+        }
+
+        section {
+            position: relative;
+            padding: 100px 8%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 18px 8%;
+            background: rgba(11, 16, 32, 0.82);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(214, 181, 109, 0.15);
+            animation: navReveal 1s ease forwards;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            animation: logoGlow 3s ease-in-out infinite;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 120px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 40%,
+                    rgba(214, 181, 109, 0.13),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #0b1020,
+                    #111a31
+                );
+
+            overflow: hidden;
+            animation: heroBackground 2s ease forwards;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns:
+                minmax(0, 1fr)
+                minmax(0, 1fr);
+
+            gap: 70px;
+            align-items: center;
+        }
+
+        .hero-text {
+            animation: fadeUp 1.2s ease forwards;
+        }
+
+        .hero-small {
+            color: var(--gold);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            animation: letterReveal 1.5s ease forwards;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.7rem, 6vw, 5rem);
+            line-height: 1.05;
+            margin-bottom: 25px;
+            color: var(--gold);
+            animation: titleReveal 1.3s ease forwards;
+
+            text-shadow:
+                0 0 20px
+                rgba(214, 181, 109, 0.12);
+        }
+
+        .hero h1 span {
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin-bottom: 35px;
+            animation: fadeUp 1.5s ease forwards;
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 13px 28px;
+
+            border: 1px solid var(--gold);
+            border-radius: 30px;
+
+            color: var(--gold);
+            text-decoration: none;
+
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+
+            animation: buttonReveal 1.8s ease forwards;
+        }
+
+        .hero-button::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: -120%;
+
+            width: 80%;
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255,255,255,0.25),
+                    transparent
+                );
+
+            transform: skewX(-25deg);
+            animation: buttonShine 4s ease-in-out infinite;
+        }
+
+        .hero-button:hover {
+            background: var(--gold);
+            color: #111;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 30px
+                rgba(214, 181, 109, 0.2);
+        }
+
+
+        /* =========================================
+           PORTRAIT
+        ========================================= */
+
+        .portrait-wrapper {
+            position: relative;
+
+            width: min(430px, 80vw);
+            aspect-ratio: 1;
+
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            animation: portraitEntrance 1.5s ease forwards;
+        }
+
+        .portrait-glow {
+            position: absolute;
+
+            width: 75%;
+            height: 75%;
+
+            border-radius: 50%;
+
+            background:
+                rgba(214, 181, 109, 0.17);
+
+            filter: blur(45px);
+
+            animation: glow 4s ease-in-out infinite;
+        }
+
+        .portrait-ring {
+            position: absolute;
+            inset: 5%;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(214, 181, 109, 0.7);
+
+            box-shadow:
+                0 0 35px
+                rgba(214, 181, 109, 0.2),
+
+                inset 0 0 35px
+                rgba(214, 181, 109, 0.08);
+
+            animation: ringPulse 5s ease-in-out infinite;
+        }
+
+        .portrait-ring::before {
+            content: "";
+
+            position: absolute;
+            inset: 12px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(241, 217, 154, 0.35);
+
+            animation: innerRingPulse 4s ease-in-out infinite;
+        }
+
+        .portrait {
+            position: relative;
+            z-index: 5;
+
+            width: 70%;
+            height: 70%;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+            object-position: center;
+
+            border:
+                5px solid
+                rgba(214, 181, 109, 0.8);
+
+            box-shadow:
+                0 15px 60px
+                rgba(0, 0, 0, 0.5),
+
+                0 0 35px
+                rgba(214, 181, 109, 0.2);
+
+            animation: portraitFloat 5s ease-in-out infinite;
+        }
+
+
+        /* =========================================
+           INFINITY
+        ========================================= */
+
+        .infinity {
+            position: absolute;
+
+            width: 95%;
+            height: 55%;
+
+            z-index: 2;
+            opacity: 0.4;
+
+            animation: rotateInfinity 18s linear infinite;
+        }
+
+        .infinity::before,
+        .infinity::after {
+            content: "";
+
+            position: absolute;
+
+            width: 50%;
+            height: 70%;
+
+            border:
+                1px solid
+                var(--gold);
+
+            border-radius: 50%;
+            top: 15%;
+        }
+
+        .infinity::before {
+            left: 4%;
+            transform: rotate(30deg);
+        }
+
+        .infinity::after {
+            right: 4%;
+            transform: rotate(-30deg);
+        }
+
+
+        /* =========================================
+           MATHEMATICAL SYMBOLS
+        ========================================= */
+
+        .math-symbol {
+            position: absolute;
+
+            color:
+                rgba(214, 181, 109, 0.45);
+
+            font-size: 1.4rem;
+
+            animation:
+                floatMath 5s ease-in-out infinite;
+        }
+
+        .symbol-one {
+            top: 5%;
+            left: 15%;
+        }
+
+        .symbol-two {
+            right: 10%;
+            top: 20%;
+            animation-delay: 1s;
+        }
+
+        .symbol-three {
+            bottom: 12%;
+            left: 12%;
+            animation-delay: 2s;
+        }
+
+        .symbol-four {
+            right: 16%;
+            bottom: 10%;
+            animation-delay: 3s;
+        }
+
+
+        /* =========================================
+           ABOUT SECTION
+        ========================================= */
+
+        .about {
+            background: #0e1529;
+            padding: 110px 8%;
+            overflow: visible;
+        }
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns:
+                minmax(300px, 0.8fr)
+                minmax(0, 1.2fr);
+
+            gap: 80px;
+            align-items: center;
+        }
+
+
+        /* =========================================
+           ABOUT PHOTO
+        ========================================= */
+
+        .about-photo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+
+            animation: photoReveal 1.2s ease forwards;
+        }
+
+        .photo-frame {
+            position: relative;
+
+            width: min(380px, 100%);
+            padding: 10px;
+
+            border:
+                1px solid
+                rgba(214, 181, 109, 0.65);
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(214, 181, 109, 0.12),
+                    rgba(255, 255, 255, 0.02)
+                );
+
+            box-shadow:
+                0 25px 60px
+                rgba(0, 0, 0, 0.45),
+
+                0 0 35px
+                rgba(214, 181, 109, 0.08);
+
+            transition:
+                transform 0.5s ease,
+                box-shadow 0.5s ease;
+        }
+
+        .photo-frame:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 30px 70px
+                rgba(0, 0, 0, 0.55),
+
+                0 0 45px
+                rgba(214, 181, 109, 0.16);
+        }
+
+        .photo-frame::before {
+            content: "";
+
+            position: absolute;
+
+            top: -8px;
+            left: -8px;
+
+            width: 45px;
+            height: 45px;
+
+            border-top:
+                2px solid
+                var(--gold);
+
+            border-left:
+                2px solid
+                var(--gold);
+
+            border-radius: 12px 0 0 0;
+
+            pointer-events: none;
+        }
+
+        .photo-frame::after {
+            content: "";
+
+            position: absolute;
+
+            right: -8px;
+            bottom: -8px;
+
+            width: 45px;
+            height: 45px;
+
+            border-right:
+                2px solid
+                var(--gold);
+
+            border-bottom:
+                2px solid
+                var(--gold);
+
+            border-radius: 0 0 12px 0;
+
+            pointer-events: none;
+        }
+
+        .photo-frame img {
+            display: block;
+
+            width: 100%;
+            height: auto;
+
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+            object-position: center;
+
+            border-radius: 17px;
+
+            border:
+                1px solid
+                rgba(214, 181, 109, 0.3);
+
+            background: #111a31;
+        }
+
+        .photo-caption {
+            margin-top: 20px;
+
+            color: var(--gold);
+
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+
+        /* =========================================
+           ABOUT TEXT
+        ========================================= */
+
+        .about-content {
+            width: 100%;
+            min-width: 0;
+
+            animation:
+                contentReveal 1.2s ease forwards;
+        }
+
+        .section-label {
+            color: var(--gold);
+
+            text-transform: uppercase;
+            letter-spacing: 4px;
+
+            font-size: 0.8rem;
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            color: #fff;
+
+            font-size:
+                clamp(2rem, 4vw, 3.2rem);
+
+            line-height: 1.2;
+            margin-bottom: 25px;
+
+            animation:
+                headingFloat 5s ease-in-out infinite;
+        }
+
+        .teacher-name {
+            color: var(--light-gold);
+
+            font-size: 1.7rem;
+            line-height: 1.3;
+
+            margin-bottom: 25px;
+
+            animation:
+                teacherNameGlow 3s ease-in-out infinite;
+        }
+
+        .about-content p {
+            color: var(--muted);
+
+            font-size: 1.05rem;
+            line-height: 1.9;
+
+            margin-bottom: 20px;
+
+            max-width: 720px;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .about-content p:hover {
+            color: #eee;
+            transform: translateX(5px);
+        }
+
+
+        /* =========================================
+           JOURNEY
+        ========================================= */
+
+        .journey {
+            background: #0b1020;
+            padding: 110px 8%;
+        }
+
+        .journey-header {
+            text-align: center;
+
+            max-width: 750px;
+
+            margin:
+                0 auto 70px;
+
+            animation:
+                fadeUp 1s ease forwards;
+        }
+
+        .journey-header .section-text {
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--muted);
+        }
+
+        .section-text {
+            color: var(--muted);
+        }
+
+        .timeline {
+            position: relative;
+
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+            top: 0;
+            bottom: 0;
+
+            width: 1px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    transparent,
+                    var(--gold),
+                    transparent
+                );
+
+            transform:
+                translateX(-50%);
+
+            animation:
+                timelineGlow 4s ease-in-out infinite;
+        }
+
+        .timeline-item {
+            width: 50%;
+
+            padding:
+                25px 45px;
+
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+
+            width: 13px;
+            height: 13px;
+
+            background: var(--gold);
+
+            border-radius: 50%;
+
+            top: 38px;
+
+            box-shadow:
+                0 0 20px
+                rgba(214, 181, 109, 0.5);
+
+            animation:
+                dotPulse 2.5s ease-in-out infinite;
+        }
+
+        .timeline-item:nth-child(odd)
+        .timeline-dot {
+            right: -6px;
+        }
+
+        .timeline-item:nth-child(even)
+        .timeline-dot {
+            left: -6px;
+        }
+
+        .timeline-card {
+            padding: 25px;
+
+            border:
+                1px solid
+                rgba(214, 181, 109, 0.16);
+
+            background:
+                rgba(255, 255, 255, 0.025);
+
+            border-radius: 15px;
+
+            transition: 0.4s;
+
+            opacity: 0;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: -100%;
+
+            width: 100%;
+            height: 1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--gold),
+                    transparent
+                );
+
+            transition: 0.5s;
+        }
+
+        .timeline-card:hover::before {
+            left: 100%;
+        }
+
+        .timeline-card:hover {
+            border-color:
+                rgba(214, 181, 109, 0.5);
+
+            transform:
+                translateY(-8px)
+                scale(1.01);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0, 0, 0, 0.25);
+        }
+
+        .timeline-card h3 {
+            color: var(--gold);
+            margin-bottom: 8px;
+            transition: 0.3s;
+        }
+
+        .timeline-card:hover h3 {
+            color: var(--light-gold);
+
+            text-shadow:
+                0 0 15px
+                rgba(214, 181, 109, 0.3);
+        }
+
+        .timeline-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+
+        /* =========================================
+           LIFELONG LESSONS
+        ========================================= */
+
+        .lessons {
+            background: #0e1529;
+            padding: 110px 8%;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lessons::before {
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(214, 181, 109, 0.07);
+
+            filter: blur(80px);
+
+            top: 10%;
+            left: -100px;
+
+            animation:
+                lessonGlow 6s ease-in-out infinite;
+        }
+
+        .lessons-header {
+            text-align: center;
+
+            max-width: 800px;
+
+            margin:
+                0 auto 65px;
+        }
+
+        .lessons-header .section-text {
+            color: var(--muted);
+
+            max-width: 700px;
+
+            margin: auto;
+
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .lifelong-message {
+            max-width: 850px;
+
+            margin:
+                0 auto;
+
+            padding:
+                55px 45px;
+
+            text-align: center;
+
+            border:
+                1px solid
+                rgba(214, 181, 109, 0.25);
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(214, 181, 109, 0.08),
+                    rgba(255, 255, 255, 0.02)
+                );
+
+            position: relative;
+
+            z-index: 2;
+
+            animation:
+                messageFloat 5s ease-in-out infinite;
+        }
+
+        .lifelong-symbol {
+            color: var(--gold);
+
+            font-size: 3.5rem;
+            line-height: 1;
+
+            margin-bottom: 20px;
+        }
+
+        .lifelong-message h3 {
+            color: var(--light-gold);
+
+            font-size: 1.7rem;
+
+            margin-bottom: 20px;
+        }
+
+        .lifelong-message p {
+            color: var(--muted);
+
+            font-size: 1.05rem;
+            line-height: 1.9;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================================
+           GRATITUDE
+        ========================================= */
+
+        .gratitude {
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(214, 181, 109, 0.11),
+                    transparent 55%
+                ),
+
+                #0e1529;
+
+            padding: 110px 8%;
+        }
+
+        .gratitude-box {
+            max-width: 850px;
+
+            margin: auto;
+
+            padding:
+                60px 40px;
+
+            border-top:
+                1px solid
+                rgba(214, 181, 109, 0.35);
+
+            border-bottom:
+                1px solid
+                rgba(214, 181, 109, 0.35);
+
+            animation:
+                gratitudeReveal 1.2s ease forwards;
+        }
+
+        .quote-mark {
+            color: var(--gold);
+
+            font-size: 4rem;
+            line-height: 1;
+
+            animation:
+                quoteFloat 3s ease-in-out infinite;
+        }
+
+        .gratitude-text {
+            font-size:
+                clamp(1.25rem, 3vw, 1.8rem);
+
+            color: #eee;
+
+            font-style: italic;
+
+            margin:
+                20px auto 30px;
+
+            animation:
+                textFade 1.5s ease forwards;
+        }
+
+        .gratitude-signature {
+            color: var(--gold);
+
+            font-size: 1.05rem;
+
+            animation:
+                signatureGlow 3s ease-in-out infinite;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            text-align: center;
+
+            padding: 35px 20px;
+
+            background: #080d19;
+
+            color: #858585;
+
+            font-size: 0.9rem;
+
+            animation:
+                footerReveal 1.5s ease forwards;
+        }
+
+        footer span {
+            color: var(--gold);
+
+            animation:
+                footerNameGlow 3s ease-in-out infinite;
+        }
+
+
+        /* =========================================
+           ANIMATIONS
+        ========================================= */
+
+        @keyframes navReveal {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes logoGlow {
+            0%, 100% {
+                text-shadow:
+                    0 0 0
+                    rgba(214, 181, 109, 0);
+            }
+
+            50% {
+                text-shadow:
+                    0 0 15px
+                    rgba(214, 181, 109, 0.35);
+            }
+        }
+
+        @keyframes heroBackground {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes letterReveal {
+            from {
+                opacity: 0;
+                letter-spacing: 1px;
+            }
+
+            to {
+                opacity: 1;
+                letter-spacing: 5px;
+            }
+        }
+
+        @keyframes titleReveal {
+            from {
+                opacity: 0;
+                transform:
+                    translateY(30px)
+                    scale(0.96);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+        }
+
+        @keyframes titleGlow {
+            0%, 100% {
+                text-shadow:
+                    0 0 5px
+                    rgba(214, 181, 109, 0.15);
+            }
+
+            50% {
+                text-shadow:
+                    0 0 25px
+                    rgba(214, 181, 109, 0.5);
+            }
+        }
+
+        @keyframes buttonReveal {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes buttonShine {
+            0% {
+                left: -120%;
+            }
+
+            45%, 100% {
+                left: 140%;
+            }
+        }
+
+        @keyframes portraitEntrance {
+            from {
+                opacity: 0;
+                transform:
+                    scale(0.8)
+                    rotate(-5deg);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    scale(1)
+                    rotate(0deg);
+            }
+        }
+
+        @keyframes portraitFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes ringPulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: scale(1.025);
+                opacity: 1;
+            }
+        }
+
+        @keyframes innerRingPulse {
+            0%, 100% {
+                opacity: 0.35;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes photoReveal {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes contentReveal {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes headingFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        @keyframes teacherNameGlow {
+            0%, 100% {
+                text-shadow:
+                    0 0 5px
+                    rgba(241, 217, 154, 0.1);
+            }
+
+            50% {
+                text-shadow:
+                    0 0 18px
+                    rgba(241, 217, 154, 0.35);
+            }
+        }
+
+        @keyframes timelineGlow {
+            0%, 100% {
+                opacity: 0.45;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes dotPulse {
+            0%, 100% {
+                transform: scale(1);
+
+                box-shadow:
+                    0 0 15px
+                    rgba(214, 181, 109, 0.4);
+            }
+
+            50% {
+                transform: scale(1.3);
+
+                box-shadow:
+                    0 0 30px
+                    rgba(214, 181, 109, 0.8);
+            }
+        }
+
+        @keyframes gratitudeReveal {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes quoteFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes textFade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes signatureGlow {
+            0%, 100% {
+                text-shadow:
+                    0 0 5px
+                    rgba(214, 181, 109, 0.1);
+            }
+
+            50% {
+                text-shadow:
+                    0 0 20px
+                    rgba(214, 181, 109, 0.45);
+            }
+        }
+
+        @keyframes footerReveal {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes footerNameGlow {
+            0%, 100% {
+                text-shadow:
+                    0 0 5px
+                    rgba(214, 181, 109, 0.1);
+            }
+
+            50% {
+                text-shadow:
+                    0 0 15px
+                    rgba(214, 181, 109, 0.4);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                transform: scale(0.95);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.08);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes rotateInfinity {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes floatMath {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes lessonGlow {
+            0%, 100% {
+                transform: scale(0.9);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.15);
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes messageFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 80px 6%;
+            }
+
+            .hero {
+                min-height: auto;
+
+                padding-top: 140px;
+                padding-bottom: 90px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+
+                gap: 55px;
+
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .portrait-wrapper {
+                width: min(370px, 85vw);
+            }
+
+
+            /* ABOUT */
+
+            .about {
+                padding: 90px 6%;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+
+                gap: 55px;
+
+                align-items: center;
+            }
+
+            .about-photo {
+                order: 1;
+            }
+
+            .about-content {
+                order: 2;
+
+                text-align: center;
+            }
+
+            .about-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .photo-frame {
+                width: min(350px, 85vw);
+            }
+
+
+            /* TIMELINE */
+
+            .timeline::before {
+                left: 15px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                width: 100%;
+
+                left: 0;
+
+                text-align: left;
+
+                padding-left: 50px;
+                padding-right: 0;
+            }
+
+            .timeline-item:nth-child(odd)
+            .timeline-dot,
+            .timeline-item:nth-child(even)
+            .timeline-dot {
+                left: 9px;
+                right: auto;
+            }
+
+
+            /* LIFELONG LESSON */
+
+            .lessons {
+                padding: 90px 6%;
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 0.95rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-small {
+                letter-spacing: 3px;
+            }
+
+            .portrait-wrapper {
+                width: 300px;
+            }
+
+            .about {
+                padding: 70px 5%;
+            }
+
+            .about-grid {
+                gap: 40px;
+            }
+
+            .photo-frame {
+                width: min(310px, 90vw);
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .teacher-name {
+                font-size: 1.4rem;
+            }
+
+            .about-content p {
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+
+            .lessons {
+                padding: 75px 5%;
+            }
+
+            .lifelong-message {
+                padding: 40px 22px;
+            }
+
+            .lifelong-message h3 {
+                font-size: 1.4rem;
+            }
+
+            .lifelong-message p {
+                font-size: 0.98rem;
+            }
+
+            .gratitude {
+                padding: 80px 5%;
+            }
+
+            .gratitude-box {
+                padding: 40px 20px;
+            }
+
+            .gratitude-text {
+                font-size: 1.2rem;
+            }
+
+            .math-symbol {
+                font-size: 1rem;
+            }
+
+        }
+
+
+        /* =========================================
+           REDUCE MOTION ACCESSIBILITY
+        ========================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration: 0.01ms !important;
+
+                animation-iteration-count: 1 !important;
+
+                scroll-behavior: auto !important;
+
+                transition-duration: 0.01ms !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <nav>
+
+        <div class="nav-container">
+
+            <div class="logo">
+                Mathematical Journey
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        About Sir
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#journey">
+                        Journey
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#lessons">
+                        Lifelong Lessons
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#gratitude">
+                        Gratitude
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section
+        class="hero"
+        id="home"
+    >
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <div class="hero-small">
+                    A Teacher • A Guide • An Influence
+                </div>
+
+                <h1>
+                    Shri
+                    <span>Ravindra</span>
+                    Upadhyay Sir
+                </h1>
+
+                <p class="hero-subtitle">
+                    My Mathematics Teacher |
+                    A Guiding Influence in My Journey.
+                </p>
+
+                <a
+                    href="#about"
+                    class="hero-button"
+                >
+                    Discover His Influence
+                </a>
+
+            </div>
+
+
+            <!-- HERO PORTRAIT -->
+
+            <div class="portrait-wrapper">
+
+                <div class="portrait-glow"></div>
+
+                <div class="portrait-ring"></div>
+
+                <div class="infinity"></div>
+
+                <div class="math-symbol symbol-one">
+                    ∑
+                </div>
+
+                <div class="math-symbol symbol-two">
+                    π
+                </div>
+
+                <div class="math-symbol symbol-three">
+                    √x
+                </div>
+
+                <div class="math-symbol symbol-four">
+                    ∞
+                </div>
+
+                <img
+                    class="portrait"
+                    src="sir.png"
+                    alt="Portrait of Shri Ravindra Upadhyay Sir, my Mathematics teacher."
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ABOUT SIR
+    ========================================== -->
+
+    <section
+        class="about"
+        id="about"
+    >
+
+        <div class="container">
+
+            <div class="about-grid">
+
+
+                <!-- PHOTO -->
+
+                <div class="about-photo">
+
+                    <div class="photo-frame">
+
+                        <img
+                            src="vsir.jpeg"
+                            alt="Portrait of Shri Ravindra Upadhyay Sir, my Mathematics teacher."
+                        >
+
+                    </div>
+
+                    <div class="photo-caption">
+                        Shri Ravindra Upadhyay Sir
+                    </div>
+
+                </div>
+
+
+                <!-- TEXT -->
+
+                <div class="about-content">
+
+                    <div class="section-label">
+                        The Story Behind the Mathematics
+                    </div>
+
+                    <h2 class="section-title">
+                        The Teacher Behind My Mathematical Journey
+                    </h2>
+
+                    <h3 class="teacher-name">
+                        Shri Ravindra Upadhyay Sir
+                    </h3>
+
+                    <p>
+                        Mathematics has been an important part of my
+                        academic journey, but behind that journey there
+                        has also been the guidance of a teacher whose
+                        influence I deeply value.
+                    </p>
+
+                    <p>
+                        Shri Ravindra Upadhyay Sir has been my Mathematics
+                        teacher and an important guiding influence
+                        throughout my Class 10th, Class 11th and
+                        Class 12th years.
+                    </p>
+
+                    <p>
+                        His guidance also remained an important part of
+                        my JEE preparation journey and my learning of
+                        Vedic Ganit. These experiences became meaningful
+                        parts of my academic and mathematical journey.
+                    </p>
+
+                    <p>
+                        This section is not simply a teacher profile.
+                        It is a small expression of gratitude for the
+                        guidance and support that became an important
+                        part of my journey through different stages
+                        of learning.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         MATHEMATICAL JOURNEY
+    ========================================== -->
+
+    <section
+        class="journey"
+        id="journey"
+    >
+
+        <div class="container">
+
+            <div class="journey-header">
+
+                <div class="section-label">
+                    The Journey
+                </div>
+
+                <h2 class="section-title">
+                    Mathematics Through the Years
+                </h2>
+
+                <p class="section-text">
+                    From school mathematics to competitive preparation
+                    and Vedic Ganit, each stage became part of a larger
+                    mathematical journey shaped by learning and guidance.
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <!-- CLASS 10 -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <h3>
+                            Class 10th
+                        </h3>
+
+                        <p>
+                            The beginning of an important phase of
+                            mathematical learning and academic growth.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CLASS 11 -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <h3>
+                            Class 11th
+                        </h3>
+
+                        <p>
+                            Mathematics became deeper and more
+                            concept-oriented, building a stronger
+                            academic foundation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CLASS 12 -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <h3>
+                            Class 12th
+                        </h3>
+
+                        <p>
+                            A stage of strengthening concepts and
+                            preparing for the challenges ahead.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- JEE -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <h3>
+                            JEE Preparation
+                        </h3>
+
+                        <p>
+                            The journey continued into competitive
+                            preparation, requiring consistency,
+                            problem-solving and deeper mathematical
+                            understanding.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VEDIC GANIT -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <h3>
+                            Vedic Ganit
+                        </h3>
+
+                        <p>
+                            An additional dimension of mathematical
+                            learning that became part of this journey.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         LIFELONG LESSONS
+    ========================================== -->
+
+    <section
+        class="lessons"
+        id="lessons"
+    >
+
+        <div class="container">
+
+            <div class="lessons-header">
+
+                <div class="section-label">
+                    Beyond Mathematics
+                </div>
+
+                <h2 class="section-title">
+                    Lifelong Lessons
+                </h2>
+
+                <p class="section-text">
+                    The most valuable lessons are not always found in
+                    textbooks. Some lessons stay with us throughout life
+                    and continue to guide us long after the classroom.
+                </p>
+
+            </div>
+
+
+            <div class="lifelong-message">
+
+                <div class="lifelong-symbol">
+                    ∞
+                </div>
+
+                <h3>
+                    A Lesson That Stays Forever
+                </h3>
+
+                <p>
+                    The greatest lesson I carry forward is that
+                    learning is not limited to a classroom or a
+                    particular stage of life. The guidance, values,
+                    encouragement and confidence received along the
+                    journey can continue to guide us for a lifetime.
+                </p>
+
+                <p>
+                    Shri Ravindra Upadhyay Sir's guidance helped me
+                    to face different situations with confidence,
+                    keep moving forward and believe in myself.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         GRATITUDE
+    ========================================== -->
+
+    <section
+        class="gratitude"
+        id="gratitude"
+    >
+
+        <div class="container">
+
+            <div class="gratitude-box">
+
+                <div class="quote-mark">
+                    “
+                </div>
+
+                <p class="gratitude-text">
+                    Some teachers teach a subject.
+                    Some teachers become a meaningful part
+                    of the journey through that subject.
+                </p>
+
+                <p class="gratitude-text">
+                    I am grateful to Shri Ravindra Upadhyay Sir
+                    for being an important part of my mathematical
+                    journey—from Class 10th and beyond, through
+                    JEE preparation, Vedic Ganit and till now.
+                    The only teacher who always encouraged me to learn,
+                    explore and never say a single word of discouragement
+                    and always takes my side either I win or lose.
+                    I am grateful to him for being a guiding influence
+                    in my journey.
+                </p>
+
+                <div class="gratitude-signature">
+                    With Respect &amp; Gratitude
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        A journey shaped by learning,
+        guidance and gratitude.
+
+        <br>
+        <br>
+
+        <span>
+            Shri Ravindra Upadhyay Sir
+        </span>
+
+        <br>
+        <br>
+
+        <span>
+            With Respect &amp; Gratitude,
+            Sakshi Singh
+        </span>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        /* =========================================
+           SMOOTH SCROLL
+        ========================================== */
+
+        document
+            .querySelectorAll('a[href^="#"]')
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    function(event) {
+
+                        event.preventDefault();
+
+                        const target =
+                            document.querySelector(
+                                this.getAttribute("href")
+                            );
+
+                        if (target) {
+
+                            target.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start"
+                            });
+
+                        }
+
+                    }
+                );
+
+            });
+
+
+        /* =========================================
+           TIMELINE REVEAL
+        ========================================== */
+
+        const timelineCards =
+            document.querySelectorAll(
+                ".timeline-card"
+            );
+
+        const observer =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.style.animation =
+                                "fadeUp 0.8s ease forwards";
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.15
+                }
+
+            );
+
+        timelineCards.forEach(card => {
+            observer.observe(card);
+        });
+
+
+        /* =========================================
+           PARALLAX MATHEMATICAL SYMBOLS
+        ========================================== */
+
+        const symbols =
+            document.querySelectorAll(
+                ".math-symbol"
+            );
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                const scrollY =
+                    window.scrollY;
+
+                symbols.forEach(
+                    (symbol, index) => {
+
+                        const movement =
+                            scrollY *
+                            (0.02 + index * 0.01);
+
+                        symbol.style.transform =
+                            `translateY(${movement}px)`;
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =========================================
+           ACTIVE NAVIGATION
+        ========================================== */
+
+        const pageSections =
+            document.querySelectorAll(
+                "section[id]"
+            );
+
+        const navLinks =
+            document.querySelectorAll(
+                ".nav-links a"
+            );
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                let currentSection = "";
+
+                pageSections.forEach(
+                    section => {
+
+                        const sectionTop =
+                            section.offsetTop - 150;
+
+                        if (
+                            window.scrollY >=
+                            sectionTop
+                        ) {
+
+                            currentSection =
+                                section.getAttribute(
+                                    "id"
+                                );
+
+                        }
+
+                    }
+                );
+
+                navLinks.forEach(
+                    link => {
+
+                        link.style.color = "#ddd";
+
+                        if (
+                            link.getAttribute("href") ===
+                            `#${currentSection}`
+                        ) {
+
+                            link.style.color =
+                                "var(--gold)";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =========================================
+           PORTRAIT MOUSE MOVEMENT
+        ========================================== */
+
+        const portraitWrapper =
+            document.querySelector(
+                ".portrait-wrapper"
+            );
+
+        if (portraitWrapper) {
+
+            portraitWrapper.addEventListener(
+                "mousemove",
+                event => {
+
+                    const rect =
+                        portraitWrapper.getBoundingClientRect();
+
+                    const x =
+                        event.clientX -
+                        rect.left;
+
+                    const y =
+                        event.clientY -
+                        rect.top;
+
+                    const centerX =
+                        rect.width / 2;
+
+                    const centerY =
+                        rect.height / 2;
+
+                    const rotateX =
+                        (y - centerY) / 35;
+
+                    const rotateY =
+                        (centerX - x) / 35;
+
+                    portraitWrapper.style.transform =
+                        `perspective(800px)
+                         rotateX(${rotateX}deg)
+                         rotateY(${rotateY}deg)`;
+
+                }
+            );
+
+            portraitWrapper.addEventListener(
+                "mouseleave",
+                () => {
+
+                    portraitWrapper.style.transform =
+                        "perspective(800px) rotateX(0deg) rotateY(0deg)";
+
+                }
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
